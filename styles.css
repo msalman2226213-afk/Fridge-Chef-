@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f4efe6;
+  --color-surface: #fffaf3;
+  --color-ink: #1c1915;
+  --color-muted: #6f655b;
+  --color-line: #e4d8c8;
+  --color-saffron: #c4511a;
+  --color-herb: #2f5d50;
+  --color-herb-soft: #e7f2ed;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Noto Sans Devanagari", serif;
+  --font-urdu: "Noto Sans Arabic", ui-sans-serif, sans-serif;
+  --font-urdu-display: "Noto Nastaliq Urdu", "Noto Sans Arabic", serif;
+  --font-hindi: "Noto Sans Devanagari", "Outfit", sans-serif;
+  --radius-card: 1rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-saffron);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
